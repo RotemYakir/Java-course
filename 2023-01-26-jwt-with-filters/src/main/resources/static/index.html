@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Welcome</h1>
+    <p>
+        <div id="mode"></div>
+    </p>
+    <!-- Register -->
+    <fieldset>
+        <legend>Register</legend>
+        <input id="email" type="text" placeholder="Email">
+        <input id="password" type="text" placeholder="Password">
+        <input id="firstName" type="text" placeholder="First Name">
+        <input id="lastName" type="text" placeholder="Last Name">
+        <input id="userName" type="text" placeholder="User Name">
+        <select name="role" id="theRole">
+            <option value="ADMIN">Admin</option>
+            <option value="COMPANY">Company</option>
+            <option value="CUSTOMER">Customer</option>
+        </select>
+        <button
+            onclick="register(email.value,password.value,firstName.value,lastName.value,userName.value,theRole.value)">
+            Register</button>
+    </fieldset>
+    <fieldset>
+        <legend>Login</legend>
+        <input id="emailLI" type="text" placeholder="Email">
+        <input id="passwordLI" type="text" placeholder="Password">
+        <button
+            onclick="login(emailLI.value,passwordLI.value)">
+            Login</button>
+        <button
+            onclick="logout()">
+            Logout</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>Use API</legend>
+        <button onclick="callGreet()">call greet</button>
+    </fieldset>
+
+
+
+    <p id="errorMsg"></p>
+    <p id="successMsg"></p>
+
+    <script src="auth.js"></script>
+    <script src="models.js"></script>
+    <script src="util.js"></script>
+    <script src="api.js"></script>
+</body>
+
+</html>
