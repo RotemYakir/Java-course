@@ -101,11 +101,11 @@ public class AdminController {
 	}
 	
 	@GetMapping("/get-all-companies")
-	public List<Company> getAllCompanies(){    // TODO do i need try/catch if is doesn't throw anything?
+	public List<Company> getAllCompanies(){    
 			return service.getAllCompanies();
 	}
 	@GetMapping("/get-all-customers")
-	public List<Customer> getAllCustomers(){    // TODO do i need try/catch if is doesn't throw anything?
+	public List<Customer> getAllCustomers(){ 
 		return service.getAllCustomers();
 	}
 
